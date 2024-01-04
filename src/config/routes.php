@@ -1,11 +1,11 @@
 <?php
 
-return [
-    '/home' => function () {
-        echo '<h1>Home</h1>';
-    },
+use app\Router\Route;
 
-    '/l' => function () {
-        echo '<h1>L</h1>';
-    },
+return [
+
+    Route::get('/home', function () {
+        include_once APP_PATH.'/views/pages/home.php';
+    }),
+
 ];
