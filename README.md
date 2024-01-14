@@ -1,1 +1,1 @@
-# kinopoisk-php_angular
+php_angular
