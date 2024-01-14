@@ -19,12 +19,6 @@ class Router
 
         $route = $this->findRoute($uri, $method);
 
-        if (! $route) {
-            echo '404';
-
-            return;
-        }
-
         if (is_array($route->getAction())) {
             [$controller,$action] = $route->getAction();
 
@@ -35,6 +29,15 @@ class Router
             $route->getAction()();
         }
 
+    }
+
+    private function routeIsNull($route)
+    {
+        if (! $route) {
+            echo '404';
+
+            return;
+        }
     }
 
     private function findRoute(string $uri, string $method): Route|false
