@@ -1,7 +1,7 @@
 <?php
 
 use app\controllers\HomeController;
-use app\Router\Route;
+use app\Kernel\Router\Route;
 
 return [
 

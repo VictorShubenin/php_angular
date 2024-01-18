@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Router;
+namespace app\Kernel\Router;
 
 class Router
 {
@@ -66,6 +66,6 @@ class Router
      */
     private function GetRoutes(): array
     {
-        return require_once APP_PATH.'/src/config/routes.php';
+        return require_once APP_PATH.'/config/routes.php';
     }
 }
